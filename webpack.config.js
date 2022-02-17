@@ -24,7 +24,7 @@ module.exports = {
     }),
   ],
   output: {
-    filename: '[name].[contenthash].bundle.js',
+    filename: '[name].[id].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   }, 
@@ -40,7 +40,16 @@ module.exports = {
   optimization:{
     runtimeChunk: true,
     removeAvailableModules: false,
-    removeEmptyChunks: false,
+    removeEmptyChunks: true,
+    chunkIds: 'named',
+    concatenateModules: true,
+    flagIncludedChunks: true,
+    innerGraph: false,
+    mangleExports: true,
+    mangleWasmImports: true,
+    mergeDuplicateChunks: false,
+    moduleIds: 'named',
+    nodeEnv: 'production',
     splitChunks: {
       cacheGroups:{
         vendor: {
