@@ -5,7 +5,8 @@
   "main": "index.js",
   "author": "Ricardo Vásquez (@Rasmez)",
   "license": "MIT",
-  "private": false,
+  "private": true,
+  "homepage": "https://rasmez.github.io",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
@@ -27,7 +28,9 @@
     "lint": "eslint \"**/*.jsx\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "react-scripts build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
@@ -55,6 +58,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "gh-pages": "^3.2.3",
     "html-webpack-plugin": "^5.5.0",
     "optionator": "^0.9.1",
     "postcss": "^8.4.6",
